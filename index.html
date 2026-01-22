@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>а я тебя люблю ехеххехе, мур</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Caveat', cursive;
+            background-color: #fff5f7;
+            color: #5a3d5c;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ffd6e7 0%, #ffc2d6 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+        }
+        
+        h1 {
+            font-family: 'Marck Script', cursive;
+            font-size: 4.5rem;
+            color: #ff69b4;
+            text-shadow: 3px 3px 0 #ffb6c1;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-size: 2.2rem;
+            color: #d1477a;
+            margin-bottom: 30px;
+        }
+        
+        .heart-decoration {
+            font-size: 2rem;
+            color: #ff69b4;
+            margin: 0 10px;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            5% { transform: scale(1.3); }
+            10% { transform: scale(1.1); }
+            15% { transform: scale(1.3); }
+            20% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+        
+        .tears-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .tear {
+            position: absolute;
+            top: 0;
+            width: 6px;
+            height: 20px;
+            background: rgba(173, 216, 230, 0.7);
+            border-radius: 0 0 50% 50%;
+            animation: fall linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+        }
+        
+        .card-title {
+            font-family: 'Marck Script', cursive;
+            font-size: 2.5rem;
+            color: #ff69b4;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .card-content {
+            font-size: 1.8rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .image-container {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            margin-top: 10px;
+            border: 8px solid white;
+            position: relative;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.03);
+        }
+        
+        .qualities-list {
+            list-style-type: none;
+            font-size: 1.8rem;
+        }
+        
+        .qualities-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ffb6c1;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .qualities-list li:before {
+            content: "❤";
+            color: #ff69b4;
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+        
+        .dedication {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #ffc2d6, #ffd6e7);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            line-height: 1.8;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .dedication:before, .dedication:after {
+            content: "❀";
+            font-size: 4rem;
+            color: #ff69b4;
+            position: absolute;
+            opacity: 0.3;
+        }
+        
+        .dedication:before {
+            top: 10px;
+            left: 20px;
+        }
+        
+        .dedication:after {
+            bottom: 10px;
+            right: 20px;
+        }
+        
+        .signature {
+            font-family: 'Marck Script', cursive;
+            font-size: 3rem;
+            color: #d1477a;
+            margin-top: 20px;
+            text-align: right;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            color: #ff69b4;
+            border-top: 2px dashed #ffb6c1;
+            margin-top: 40px;
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.8rem;
+            }
+            
+            .card-content, .qualities-list, .dedication {
+                font-size: 1.6rem;
+            }
+            
+            .card-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>КСЕНЯ самая лучшая девушка на свете, никому ее не отдам. мой котеночек.</h1>
+            <div class="subtitle">Сайт о МОЕЙ ДЕВОЧКЕ РРР</div>
+            <div>
+                <span class="heart-decoration">❤</span>
+                <span class="heart-decoration">💖</span>
+                <span class="heart-decoration">🌸</span>
+                <span class="heart-decoration">💕</span>
+                <span class="heart-decoration">✨</span>
+            </div>
+            <div class="tears-container" id="tearsContainer"></div>
+        </header>
+        
+        <div class="main-content">
+            <div class="card">
+                <h2 class="card-title">Моя звездочка</h2>
+                <p class="card-content">Ксеня ты самая преркасный человек, который только есть в этом мире я тебя безумно ценю, спасибо за то что ты есть, я тебя люблю, ты мое чудо, мое сокровище, мое чудо, самый дорогой мне человек, обожаю тебя дорогая..</p>
+                
+                <!-- ПРЯМО ЗДЕСЬ ВСТАВЬТЕ ССЫЛКУ НА КАРТИНКУ -->
+                <!-- Замените ссылку ниже на свою картинку -->
+                <div class="image-container">
+                    <img src="kotenok.jfif" alt="Самая прекрасная девушка">
+                    <img src="mur.jfif" alt="Самая прекрасная девушка">
+                </div>
+                <!-- КОНЕЦ ОБЛАСТИ ДЛЯ КАРТИНКИ -->
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">Прекрасные качества моей милашечки мурррр</h2>
+                <ul class="qualities-list">
+                    <li>ДОБРОТА, я считаю тебя самой добренькой, сердечко у тебя очень доброе ты стараешься всем помочь, сделать лучше даже не смотря на то что тебе это может быть тяжело, а ты все равно делаешь, обнять..</li>
+                    <li>НЕЖНОСТЬ, ну тут ты прям милашечка моя, самое нежное существо во всей галактике МОЕ ЧУДО ЧУДЕСНОЕ МУРРР</li>
+                    <li>УМ, считаю тебя очень умным и знающим человеком, ты многое знаешь и это факт, умничка моя</li>
+                    <li>ЗАБОТА, то как ты заботишься обо мне, то какие милые вещи мне говоришь очень важно для меня ты прям.. вау... спасибо тебе, это очень важно, даже в обычный день переживаешь, вдруг что не так, даже сегодня говорила аккуратнее.. люблю тебя.</li>
+                    <li>ИСКРЕННОСТЬ, одно из самых главных качеств, спасибо за то что честна со мной, не скрываешь что то говоришь сразу, очень многое для меня это значит, обожаю..</li>
+                    <li>КРАСОТА И МИЛОТА, и тут не только про внешнюю состовляющую(ЧТО ТОЖЕ САМОЕ ЛУЧШЕЕ МЕЖДУ ПРОЧЕМ), тут больше про твой внутренний мир, он безумно красив и мил, дорогая, ты самый лучши человечек, еще раз об этому говорю да мурр...</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="dedication">
+            <p>ДОРОГАЯ ТЫ САМОЕ ПРЕКРАСНОЕ ЧТО СЛУЧАЛОСЬ В МОЕЙ ЖИЗНИ, СПАСИБО ТЕБЕ</p>
+            <p>ТЫ НАПОЛНЯЕШЬ МИР НЕЖНОСТЬЮ И СВЕТОМ, САМОЕ ДРАГОЦЕННОЕ ЧТО ЕСТЬ В ЭТОМ МИРЕ(и такое сокровище мне досталось ехехехех)</p>
+            <p>А ТЫ КСТАТИ САМЫЙ ЛЮБИМЫЙ ЧЕЛОВЕЧЕК МУРР</p>
+            <p>СПАСИБО ЧТО ТЫ ЕСТЬ, ЗВЕЗДОЧКА МОЯ, ТЫ САМАЯ ЛУЧШАЯ!!!</p>
+            <div class="signature">С САМЫМИ ИСКРЕННИМИ СЛОВАМИ, КОТЕНОК</div>
+        </div>
+        
+        <footer>
+            <p>ЭТОТ САЙТ уже я сделал еххеех, заготовка от ии да, но все остальное я да, НАЧИНКА МОЯ ВОТ, мур все для тебя, обещал сделал.</p>
+            <p>ТЫ ЗАСЛУЖИВАЕШЬ ВСЕГО В ЭТОМ МИРЕ КОТЕНОК, а моей любви и заслуживать не нада, буду любить тебя любой, ты самая ПРЕКРАСНАЯ...</p>
+        </footer>
+    </div>
+
+    <script>
+        // Создание слез счастья
+        function createTears() {
+            const tearsContainer = document.getElementById('tearsContainer');
+            const tearCount = 25;
+            
+            for (let i = 0; i < tearCount; i++) {
+                const tear = document.createElement('div');
+                tear.className = 'tear';
+                
+                // Случайная позиция и анимация
+                const left = Math.random() * 100;
+                const animationDuration = 2 + Math.random() * 3;
+                const animationDelay = Math.random() * 5;
+                const size = 3 + Math.random() * 4;
+                
+                tear.style.left = `${left}%`;
+                tear.style.width = `${size}px`;
+                tear.style.height = `${size * 3}px`;
+                tear.style.animationDuration = `${animationDuration}s`;
+                tear.style.animationDelay = `${animationDelay}s`;
+                
+                tearsContainer.appendChild(tear);
+            }
+        }
+        
+        // Создание мерцающих искорок
+        function createSparkles() {
+            document.addEventListener('mousemove', function(e) {
+                // Создаем искорки только иногда
+                if (Math.random() > 0.7) {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    
+                    sparkle.style.left = `${e.pageX}px`;
+                    sparkle.style.top = `${e.pageY}px`;
+                    
+                    document.body.appendChild(sparkle);
+                    
+                    // Анимация появления и исчезновения
+                    sparkle.animate([
+                        { opacity: 0, transform: 'scale(0)' },
+                        { opacity: 1, transform: 'scale(1)' },
+                        { opacity: 0, transform: 'scale(0)' }
+                    ], {
+                        duration: 1000,
+                        easing: 'ease-out'
+                    });
+                    
+                    // Удаляем элемент после анимации
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 1000);
+                }
+            });
+        }
+        
+        // Инициализация всех эффектов после загрузки страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            createTears();
+            createSparkles();
+            
+            // Добавляем эффект "пульсации" для заголовка
+            const title = document.querySelector('h1');
+            setInterval(() => {
+                title.style.textShadow = `3px 3px 0 #ffb6c1, 0 0 20px rgba(255, 182, 193, ${0.5 + Math.random() * 0.5})`;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
